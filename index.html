@@ -2,14 +2,36 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="CSS/map.css">
+    <link rel="stylesheet" href="CSS/main.css">
     <title>TP Hugo Mohammed</title>
 </head>
 <body>
-<div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFZk7rnYOVthrQqYIrI_LIwmz0MZGrqvk&callback=initMap"
-            async defer></script>
+
+<script src="script/jquery-3.2.1.js"></script>
+<script id="map" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFZk7rnYOVthrQqYIrI_LIwmz0MZGrqvk&callback=initMap"
+        async defer></script>
+<div id="output">
+    <table>
+        <caption> entete du tableau</caption>
+        <thead>
+        <tr>
+            <td>choisir une ligne de coordonnées</td>
+            <td>longitude</td>
+            <td>latitude</td>
+            <td>data</td>
+            <td>Date d'enregistrement</td>
+        </tr>
+        </thead>
+        <tbody id="donnee_enregistree">
+        </tbody>
+    </table>
+    <tr>
+        <button id="chercher_coord">trouver coordonnees</button>
+    </tr>
+</div>
+
 <script src="script/map.js"></script>
-<script src="script/jquery-3.2.1.js" ></script>
+
 <script src="script/main.js"></script>
 </body>
 </html>
