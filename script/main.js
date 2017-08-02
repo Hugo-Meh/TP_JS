@@ -13,12 +13,13 @@ function date() {
     return date;
 }
 
-//constructeur des coordonnees GPS
+//constructeur des relevée
 function Releve(lat, long, data) {
     this.lat  = lat;
     this.long = long;
     this.data = data;
     this.date = date();
+    
 }
 
 //ajouter des Coordonnes dans un tableau
@@ -37,7 +38,7 @@ function recuperer_coord_gps() {
     let cont_parent = id_tab.find("input:checked").parent().parent();
     let lat = parseFloat(cont_parent.find(".lat").text());
     let lng = parseFloat(cont_parent.find(".long").text());
-    console.log("fonction recuperer touche", {lat: lat, lng: lng})
+    console.log("fonction recuperer touche", {lat: lat, lng: lng});
     return {lat: lat, lng: lng};
 
 }
@@ -89,4 +90,4 @@ else $("#actualiser").desabled=false;
 $("#actualiser").on("click", function () {
 
     charger_storage();
-})
+});
